@@ -5,6 +5,23 @@
 ### Number of parameters in the model - 13,496
 ### Receptive Field - 32
 
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #.   Receptive Layer
+================================================================
+            Conv2d-1            [-1, 8, 28, 28]              72
+       BatchNorm2d-2            [-1, 8, 28, 28]              16
+            Conv2d-3           [-1, 16, 28, 28]           1,152
+       BatchNorm2d-4           [-1, 16, 28, 28]              32
+         MaxPool2d-5           [-1, 16, 14, 14]               0
+            Conv2d-6           [-1, 16, 14, 14]           2,304
+       BatchNorm2d-7           [-1, 16, 14, 14]              32
+            Conv2d-8           [-1, 16, 14, 14]           2,304
+       BatchNorm2d-9           [-1, 16, 14, 14]              32
+        MaxPool2d-10             [-1, 16, 7, 7]               0
+           Conv2d-11             [-1, 32, 5, 5]           4,608
+      BatchNorm2d-12             [-1, 32, 5, 5]              64
+           Conv2d-13             [-1, 10, 3, 3]           2,880
+
 ## LOGS ##
 0%|          | 0/1875 [00:00<?, ?it/s]/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:26: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
 loss=0.018312253057956696 batch_id=1874: 100%|██████████| 1875/1875 [00:23<00:00, 80.22it/s]

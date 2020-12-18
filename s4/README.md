@@ -10,7 +10,8 @@
 ### Used a convolution block of Convolution 2D and Batch Norm followed by Max pool after 2 blocks
 ### Model Summary
 
-```class Net(nn.Module):
+```python
+class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(1, 8, 3, padding=1,bias=False) #input -28x28 Output-26x26 RF-3
@@ -59,7 +60,7 @@
 
 ```
 ## LOGS ##
-```
+```python
 0%|          | 0/1875 [00:00<?, ?it/s]/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:26: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
 loss=0.018312253057956696 batch_id=1874: 100%|██████████| 1875/1875 [00:23<00:00, 80.22it/s]
   0%|          | 0/1875 [00:00<?, ?it/s]

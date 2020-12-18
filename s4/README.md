@@ -1,6 +1,7 @@
 ## Assignment Objective
 ---------- Reach 99.4% Accuracy on MNIST dataset using less than 20k params-------------
 
+### Solution file - EVA4 - Session 2_nrs.ipynb
 ### Reached 99.46% Accuracy first at 5th epoch
 ### Consistently the Accuracy is reaching greater than 99.28% from 4th epoch
 ### Number of parameters in the model - 13,496

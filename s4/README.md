@@ -6,7 +6,7 @@
 ### Receptive Field - 32
 
 ----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #.   Receptive Layer
+        Layer (type)               Output Shape         Param    Receptive Layer
 ================================================================
             Conv2d-1            [-1, 8, 28, 28]              72
        BatchNorm2d-2            [-1, 8, 28, 28]              16

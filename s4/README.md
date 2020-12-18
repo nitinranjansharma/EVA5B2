@@ -9,6 +9,36 @@
 
 ### Used a convolution block of Convolution 2D and Batch Norm followed by Max pool after 2 blocks
 ### Model Summary
+
+```class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(1, 8, 3, padding=1,bias=False) #input -28x28 Output-26x26 RF-3
+        self.batchnorm1 = nn.BatchNorm2d(8)
+        self.conv2 = nn.Conv2d(8, 16, 3, padding=1,bias=False) #input -26x26 Output-24x24 RF-5
+        self.batchnorm2 = nn.BatchNorm2d(16)
+        self.pool1 = nn.MaxPool2d(2, 2) #input -16x16 Output-14x14 RF-10
+        self.conv3 = nn.Conv2d(16, 16, 3, padding=1,bias=False)
+        self.batchnorm3 = nn.BatchNorm2d(16) #input -14x14 Output-12x12 RF-12
+        self.conv4 = nn.Conv2d(16, 16, 3, padding=1,bias=False) #input -12x12 Output-10x10 RF-14
+        self.batchnorm4 = nn.BatchNorm2d(16)
+        self.pool2 = nn.MaxPool2d(2, 2) #input -10x10 Output-5x5 RF-28
+        self.conv5 = nn.Conv2d(16, 32, 3,bias=False) #input -5x5 Output-3x3 RF-30
+        self.batchnorm5 = nn.BatchNorm2d(32)
+        self.conv6 = nn.Conv2d(32, 10, 3,bias=False) #input -3x3 Output-1x1 RF-32
+        
+        
+
+    def forward(self, x):
+        x = self.pool1(F.relu(self.batchnorm2(self.conv2(self.batchnorm1(F.relu(self.conv1(x)))))))
+        x = self.pool2(self.batchnorm4(F.relu(self.conv4(self.batchnorm3(F.relu(self.conv3(x)))))))
+        x = F.relu(self.conv6(self.batchnorm5(F.relu(self.conv5(x)))))
+        x = F.adaptive_avg_pool2d(x, (1, 1))
+        x = x.view(-1, 10)
+        return F.log_softmax(x)
+```
+
+```
 --------------------------------------------------------------------------------------------------
 #####        Layer (type)        ----       Output Shape    ----     Param    ---- Receptive Layer
 ==================================================================================================
@@ -26,7 +56,10 @@
 #####      BatchNorm2d-12  ------>           [-1, 32, 5, 5]   ------>           64 ------> 30
 #####           Conv2d-13  ------>           [-1, 10, 3, 3]   ------>        2,880 ------> 32
 
+
+```
 ## LOGS ##
+```
 0%|          | 0/1875 [00:00<?, ?it/s]/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:26: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
 loss=0.018312253057956696 batch_id=1874: 100%|██████████| 1875/1875 [00:23<00:00, 80.22it/s]
   0%|          | 0/1875 [00:00<?, ?it/s]
@@ -83,3 +116,4 @@ Test set: Average loss: 0.0191, Accuracy: 9940/10000 (99%)
 loss=0.0014012942556291819 batch_id=1874: 100%|██████████| 1875/1875 [00:23<00:00, 80.58it/s]
 
 Test set: Average loss: 0.0184, Accuracy: 9941/10000 (99%)
+```

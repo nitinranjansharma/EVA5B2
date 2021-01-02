@@ -1,4 +1,5 @@
-''' python
+
+
 1. Target - Reach 99.4% accuracy in Validation within 15epochs using 10k params
 2. Experimented on regularizer, augmentation, learning rate, and scheduler to reach the desired result
 3. Experimented with Different architectures

@@ -71,3 +71,4 @@ Estimated Total Size (MB): 53.89
 
 Accuracy - 87.86%
 
+Images from misclassified and Properly classified can be found under - https://github.com/nitinranjansharma/EVA5B2/tree/main/s9/images

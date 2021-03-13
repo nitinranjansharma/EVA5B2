@@ -5,7 +5,7 @@
 ## Model
 ## RESNET-18
 
-''' python
+``` python
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -68,7 +68,7 @@ Forward/backward pass size (MB): 45.00
 Params size (MB): 43.00
 Estimated Total Size (MB): 88.05
 ---------------------------------------------------------------
-'''
+```
 
 ## Result - test accuracy 0.511
 

@@ -85,7 +85,7 @@ The JSON includes information regarding the entire annotations process
 5. Right at the bottom it mentions the class name and the ID references to the categories selected
 
 ```
-``` 
+``` python
 ##INFO HEader
     "info": {
         "year": 2021,

@@ -3,7 +3,8 @@
 ## Use RESNET-18 model to reach the result under 50 epochs
 
 ## Model
-RESNET-18
+## RESNET-18
+
 '''python
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #

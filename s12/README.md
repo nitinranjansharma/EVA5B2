@@ -75,5 +75,14 @@ Estimated Total Size (MB): 88.05
 ## Assignemnt - B
 ## Download data of Hardhats, Masks, Vests and Boots and annotate them - create a json file and find out cluster for optimal bounding boxes
 
+``` python
+The JSON includes information regarding the entire annotations process
+1. First it gives the general information regarding the year, version and contributor info - with all the necessary information about the file meta data
+2. Secondly, it gives the information about the image and its dimensions, relating it to an ID and license information if any
+3. Third components are the annotations, which states the segmentations details, the area and the bounding box dimensions corresponding the class ids and image ids and the category ids.
 
+4. Fourthly, it mentioned the licence information towards the bottom - license that can be used in the annotations or any inherited licenses
+5. Right at the bottom it mentions the class name and the ID references to the categories selected
+
+```
 

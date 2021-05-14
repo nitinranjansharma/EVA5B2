@@ -1,0 +1,8 @@
+weights/
+.vscode/
+__pycache__/
+data/
+logs/
+lightning_logs/
+*.pyc
+build/

@@ -124,6 +124,7 @@ class Model(pl.LightningModule):
     def __init__(self, config, num_batches, num_classes, yolo_labels):
         super(Model, self).__init__()
         self.save_hyperparameters()
+        self.automatic_optimization=False
 
         self.config = config
         planercnn_config = config.planercnn_config

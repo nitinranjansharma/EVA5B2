@@ -94,6 +94,5 @@
 ../images/R65.jpg
 ../images/R74.jpg
 ../images/R83.jpg
-../images/SImage_106.jpg
 ../images/SImage_127.jpg
 ../images/SImage_62.jpg

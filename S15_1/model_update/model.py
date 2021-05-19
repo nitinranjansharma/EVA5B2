@@ -1,4 +1,4 @@
-from fox.yolov3.utils.torch_utils import ModelEMA
+from model_update.yolov3.utils.torch_utils import ModelEMA
 from typing import Dict, List, Any
 
 import numpy as np
@@ -6,21 +6,21 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from fox.midas.midas.midas_net import MidasNet
-from fox.planercnn.models.model import MaskRCNN
-from fox.planercnn.models.refinement_net import RefineModel
-from fox.planercnn.visualize_utils import visualizeBatchPair
-from fox.yolov3.eva5_helper import YoloTrainer
-from fox.yolov3.models import Darknet, create_modules
-from fox.yolov3.utils.parse_config import parse_data_cfg, parse_model_cfg
-from fox.yolov3.utils.utils import (
+from model_update.midas.midas.midas_net import MidasNet
+from model_update.planercnn.models.model import MaskRCNN
+from model_update.planercnn.models.refinement_net import RefineModel
+from model_update.planercnn.visualize_utils import visualizeBatchPair
+from model_update.yolov3.eva5_helper import YoloTrainer
+from model_update.yolov3.models import Darknet, create_modules
+from model_update.yolov3.utils.parse_config import parse_data_cfg, parse_model_cfg
+from model_update.yolov3.utils.utils import (
     labels_to_class_weights,
     non_max_suppression,
     output_to_target,
 )
-from fox.utils import plot_yolo_bbox, construct_midas_depth, visualize_planercnn, visualize_planercnn_batch
-from fox.losses import rmse_loss
-from fox.planercnn.eva5_helper import PlaneRCNNTrainer
+from model_update.utils import plot_yolo_bbox, construct_midas_depth, visualize_planercnn, visualize_planercnn_batch
+from model_update.losses import rmse_loss
+from model_update.planercnn.eva5_helper import PlaneRCNNTrainer
 
 import pytorch_lightning as pl
 

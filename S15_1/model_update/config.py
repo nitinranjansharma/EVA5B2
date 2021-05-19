@@ -83,7 +83,7 @@ class PlaneRCNNOptions:
     LR: float
     gpu: int = 1
     task: str = "train"  # [train, test, predict]
-    anchorFolder: str = "fox/planercnn/anchors"
+    anchorFolder: str = "model_update/planercnn/anchors"
     heatmapThreshold: float = 0.5
     distanceThreshold3D: float = 0.2
     distanceThreshold2D: float = 20.0

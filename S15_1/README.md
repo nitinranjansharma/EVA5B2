@@ -30,7 +30,7 @@ In the case of YOLO we use the annotated labels created during previous assignme
 In the case of PlaneRCNN, we are using segmentation and masks output after validating on pretrained weight. We are not using the depth output as MiDaS does better depth predictions. The masks and segmentations of the output then combined to get a 2D image. 
 
 #### Folder Structure Creation: 
-folder: ![img]("https://github.com/nitinranjansharma/EVA5B2/blob/main/S15_1/folder_struct.PNG")
+folder: ![img](<folder_struct.PNG>)
 
 ### TRAINING
 Training is majorly done using transfer learning strategy. The reason being, the lack of image and processing power and this process provide satisfactory results in limited time. 
@@ -44,8 +44,8 @@ In the case of PlaneRCNN, issues encountered here were mostly related to depth a
  
 #### Putting it all together
 The final loss was computed as a weighted sum of all the average of three individual losses.         
-formula: ![img]("/formula.PNG")
+formula: ![img](<formula.PNG>)
 
 While training it has been observed that PlaneRCNN cannot be trained with a batch size of more than 1. So the entire training process was conducted using batch size of 1. This took a lot of training time on Colab GPU. For training on more than batch size one, from my understanding it can be trained as a part training (train YOLO then PlaneRCNN). 
 
-train: ![img]("/train.PNG")
+train: ![img](<train.PNG>)

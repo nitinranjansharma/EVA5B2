@@ -51,5 +51,5 @@ While training it has been observed that PlaneRCNN cannot be trained with a batc
 train: ![img](<train.PNG>)
 
 ### Validation - Output
-YOLO output: ![img](<S15_1/images_readme/YoloOut.png>)
-MiDaS output: ![img](<S15_1/images_readme/midas.png>)
+YOLO output: ![img](</images_readme/YoloOut.png>)
+MiDaS output: ![img](</images_readme/midas.png>)

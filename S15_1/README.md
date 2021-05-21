@@ -14,7 +14,7 @@ YOLOv3 architecture was updated based on the already feature map extracted from 
 #### PlaneRCNN – reference: https://github.com/NVlabs/planercnn
 Initial purpose of PlaneRCNN was to generates planes from an image, detects arbitrary number of planes, and reconstructs piecewise planar surfaces from a single RGB image. The feature maps from the ResNext101 is followed into PlaneRCNN block matching up with the encoder output shapes to input of the decoder (PlaneRCNN). The feature pyramid network was used to capture the feature maps and train on the portion of MaskRCNN.
 
-base: ![img]("basic_struct.PNG")
+base: ![img](basic_struct.png)
 
 ### THE DATASET
 As we have already gone through the model, which is a combination of MiDaS, YOLO and PlaneRCNN we have created our own dataset from all three submodels - MiDAS, YOLOv3 and PlaneRCNN, which further combined to create the master data. 

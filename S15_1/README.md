@@ -49,3 +49,7 @@ formula: ![img](<formula.PNG>)
 While training it has been observed that PlaneRCNN cannot be trained with a batch size of more than 1. So the entire training process was conducted using batch size of 1. This took a lot of training time on Colab GPU. For training on more than batch size one, from my understanding it can be trained as a part training (train YOLO then PlaneRCNN). 
 
 train: ![img](<train.PNG>)
+
+### Validation - Output
+YOLO output: ![img](<S15_1/images_readme/YoloOut.png>)
+MiDaS output: ![img](<S15_1/images_readme/midas.png>)

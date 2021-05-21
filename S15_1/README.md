@@ -14,7 +14,7 @@ YOLOv3 architecture was updated based on the already feature map extracted from 
 #### PlaneRCNN – reference: https://github.com/NVlabs/planercnn
 Initial purpose of PlaneRCNN was to generates planes from an image, detects arbitrary number of planes, and reconstructs piecewise planar surfaces from a single RGB image. The feature maps from the ResNext101 is followed into PlaneRCNN block matching up with the encoder output shapes to input of the decoder (PlaneRCNN). The feature pyramid network was used to capture the feature maps and train on the portion of MaskRCNN.
 
-base: ![img](basic_struct.png)
+base: ![img]("https://github.com/nitinranjansharma/EVA5B2/blob/main/S15_1/basic_struct.png")
 
 ### THE DATASET
 As we have already gone through the model, which is a combination of MiDaS, YOLO and PlaneRCNN we have created our own dataset from all three submodels - MiDAS, YOLOv3 and PlaneRCNN, which further combined to create the master data. 
@@ -30,7 +30,7 @@ In the case of YOLO we use the annotated labels created during previous assignme
 In the case of PlaneRCNN, we are using segmentation and masks output after validating on pretrained weight. We are not using the depth output as MiDaS does better depth predictions. The masks and segmentations of the output then combined to get a 2D image. 
 
 #### Folder Structure Creation: 
-folder: ![img]("folder_struct.PNG")
+folder: ![img]("https://github.com/nitinranjansharma/EVA5B2/blob/main/S15_1/folder_struct.PNG")
 
 ### TRAINING
 Training is majorly done using transfer learning strategy. The reason being, the lack of image and processing power and this process provide satisfactory results in limited time. 

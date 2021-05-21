@@ -14,7 +14,7 @@ YOLOv3 architecture was updated based on the already feature map extracted from 
 #### PlaneRCNN – reference: https://github.com/NVlabs/planercnn
 Initial purpose of PlaneRCNN was to generates planes from an image, detects arbitrary number of planes, and reconstructs piecewise planar surfaces from a single RGB image. The feature maps from the ResNext101 is followed into PlaneRCNN block matching up with the encoder output shapes to input of the decoder (PlaneRCNN). The feature pyramid network was used to capture the feature maps and train on the portion of MaskRCNN.
 
-base: ![Alt](/images_readme/basic_struct.PNG "basic structure")
+base: ![Alt](/basic_struct.PNG "basic structure")
 
 ### THE DATASET
 As we have already gone through the model, which is a combination of MiDaS, YOLO and PlaneRCNN we have created our own dataset from all three submodels - MiDAS, YOLOv3 and PlaneRCNN, which further combined to create the master data. 
@@ -30,7 +30,7 @@ In the case of YOLO we use the annotated labels created during previous assignme
 In the case of PlaneRCNN, we are using segmentation and masks output after validating on pretrained weight. We are not using the depth output as MiDaS does better depth predictions. The masks and segmentations of the output then combined to get a 2D image. 
 
 #### Folder Structure Creation: 
-folder: ![Alt](/images_readme/folder_struct.PNG "basic structure")
+folder: ![Alt](/folder_struct.PNG "basic structure")
 
 ### TRAINING
 Training is majorly done using transfer learning strategy. The reason being, the lack of image and processing power and this process provide satisfactory results in limited time. 
@@ -44,8 +44,8 @@ In the case of PlaneRCNN, issues encountered here were mostly related to depth a
  
 #### Putting it all together
 The final loss was computed as a weighted sum of all the average of three individual losses.         
-formula: ![Alt](/images_readme/formula.PNG "formula")
+formula: ![Alt](/formula.PNG "formula")
 
 While training it has been observed that PlaneRCNN cannot be trained with a batch size of more than 1. So the entire training process was conducted using batch size of 1. This took a lot of training time on Colab GPU. For training on more than batch size one, from my understanding it can be trained as a part training (train YOLO then PlaneRCNN). 
 
-train: ![Alt](/images_readme/train.PNG "Training - 30 epochs")
+train: ![Alt](/train.PNG "Training - 30 epochs")
